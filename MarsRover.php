@@ -1,6 +1,6 @@
 <?php
 
-	class MarsRover
+class MarsRover
 {
     // declare axis coordinates
     private $x = 0;
@@ -32,11 +32,9 @@
         $this->y = $y;
 
         if (array_key_exists($facing, $this->facingArray)) {
-            // pass in the default facing (1) so we can use it to determine
-            // whether the rover turns left or right
             $this->facing = $this->facingArray[$facing];
         } else {
-            // if letter is not N,S,E or W stop the execution
+            // if cardinal isn't N,S,E or W stop the execution
             exit('Input not recognised');
         }
     }
